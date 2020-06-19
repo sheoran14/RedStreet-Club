@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<body style="background-color:darkgray;"></body>
+{% include 'navigation.html' %}
+{% for kq in kq %}
+<div><h1>Tournament Name - {{kq.name}}</h1>
+<h2>Tournament Venue - {{kq.venue}}</h2>
+<h2>Type - {{kq.message}}</h2>
+    <h2>Cash Prize in Rupees - {{kq.cash}}</h2>
+    <h2>Tournament Date - 20/5/20 </h2><br>
+    <div><a href="{% url 'new' %}"><button><b> Participate</b></button></a></div><br>
+      <img src="{% static 'css/ch.jpg' %}" height="250" width="300" align="middle"></div><br>
+
+{% endfor %}
+{% endblock content %}

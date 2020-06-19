@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<body style="background-color:rosybrown;"></body>
+{% include 'navigation.html' %}
+{% for cont in cont %}
+<div>
+
+    <h1>Tournament Name - {{cont.name}}</h1>
+<h2>Tournament Venue - {{cont.venue}}</h2>
+<h2>Type - {{cont.message}}</h2>
+    <h2>Cash Prize in Rupees - {{cont.cash}}</h2>
+    <h2>Tournament Date - 20/5/20 </h2><br>
+    <div><a href="{% url 'new' %}"><button autofocus> <b>Participate</b></button></a></div><br>
+      <img src="{% static 'css/ari.jpg' %}" height="250" width="300" align="middle"></div><br>
+
+{% endfor %}
+{% endblock content %}

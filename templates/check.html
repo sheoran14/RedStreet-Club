@@ -1,0 +1,24 @@
+
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<body style="background-color:mistyrose;">
+<form method="POST">
+    {%if user.is_authenticated %}
+            {% csrf_token %}
+    <a href="{% url 'profile' %}"> profile </a>
+            <!--{{ part.as_p }}
+            <button type ='submit'>Submit</button>-->
+
+    {%else%}
+    <p> <b>Login to Participate</b></p><br>
+    <a href="{% url 'login' %}"> Log in </a><br>
+    {% endif %}
+         </form>
+
+</body>
+<body>
+ <div><img src="{% static 'css/go.jpg' %}" height="300" width="300" align="middle"></div>
+    </body>
+
+{% endblock content %}

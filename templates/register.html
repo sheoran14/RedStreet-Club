@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<body style="background-color:sienna;"></body>
+{% include 'navigation.html' %}
+
+     <div style="margin-top: 80px; width: 900px; margin: 80px auto;">
+
+    <form method="POST">
+        {% csrf_token %}
+        <body>
+<img src="{% static 'css/ru.jpg' %}" height="250" width="250" align="middle">
+
+</body>
+        <fieldset>
+            <legend>
+                Join now to participate</legend>
+            {{ form | crispy }}
+        </fieldset>
+
+
+        <div>
+        <button class="btn" type="submit">
+            Sign up
+        </button>
+        </div>
+    </form>
+     </div>
+
+{% endblock content %}

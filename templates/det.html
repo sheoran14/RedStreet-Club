@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<body style="background-color:olivedrab;"></body>
+{% include 'navigation.html' %}
+
+<table style = "width:100%">
+    <tr>
+
+<th colspan="2"><img src="{% static 'css/warm.jpg' %}" height="290" width="340" align="middle"></th>
+
+
+<th colspan="2"><img src="{% static 'css/power.jpg' %}" height="290" width="340" align="middle"></th>
+
+<th colspan="2"><img src="{% static 'css/grass.jpg' %}" height="290" width="340" align="middle"></th>
+    </tr>
+    <tr>
+    <td colspan="2"> <a href="{% url 'arm' %}">      Arm Wrestling </a></td>
+ <td colspan="2"><a href="{% url 'plift' %}"> Power Lifting </a></td>
+
+
+<td colspan="2"><a href="{% url 'bmint' %}"> Badminton </a></td>
+        </tr>
+</table><br><br>
+<table style = "width:100%">
+    <tr>
+        <th colspan="2">
+<img src="{% static 'css/build.PNG' %}" height="290" width="350" align="middle"></th>
+           <th colspan="2">
+<img src="{% static 'css/play.jpg' %}" height="290" width="350" align="middle"></th>
+           <th colspan="2">
+<img src="{% static 'css/chess.jpg' %}" height="290" width="350" align="middle"></th>
+        <tr><td colspan="2">
+<a href="{% url 'bbild' %}">      BodyBuilding </a></td>
+<td colspan="2">
+<a href="{% url 'ten' %}"> Table Tennis </a></td>
+<td colspan="3">
+<a href="{% url 'king' %}"> Chess </a></td></tr></table>
+{% endblock content %}

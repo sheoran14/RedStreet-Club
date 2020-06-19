@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<body style="background-color:orange;"></body>
+{% include 'navigation.html' %}
+{% for fbj in fbj %}
+<div><h1>Tournament Name - {{fbj.name}}</h1>
+<h2>Tournament Venue - {{fbj.venue}}</h2>
+<h2>Type - {{fbj.message}}</h2>
+    <h2>Cash Prize in Rupees - {{fbj.cash}}</h2><br>
+<div><a href="{% url 'new' %}"><button autofocus> <b>Participate</b></button></a></div><br>
+      <img src="{% static 'css/bu.PNG' %}" height="250" width="300" align="middle"></div><br>
+
+{% endfor %}
+{% endblock content %}

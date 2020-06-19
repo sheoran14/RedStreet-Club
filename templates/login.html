@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<body style="background-color:lightslategray;"></body>
+{% include 'navigation.html' %}
+
+<div style="margin-top: 80px; width: 900px; margin: 80px auto;">
+    <form method="POST">
+        {% csrf_token %}
+              <body>
+<img src="{% static 'css/power.jpg' %}" height="350" width="350" align="middle">
+
+</body>
+        <fieldset>
+            <legend>
+                Log in </legend>
+            {{ form | crispy }}
+        </fieldset>
+        <div>
+        <button class="btn" type="submit">
+            Log in
+        </button>
+        </div>
+    </form>
+
+</div>
+
+{% endblock content %}
